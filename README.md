@@ -6,7 +6,7 @@ This is the repository for our project for [Holberton School](https://www.holber
 ## Overview :computer: 
 `hsh` is a custom UNIX command line interpreter, built entirely in **C** language. It works by receiving commands given by the user input. 
 
-## Built With :hammer_and_wrench: 
+## Built With :hammer_and_wrench:
 
 `hsh` was developped with:
 
