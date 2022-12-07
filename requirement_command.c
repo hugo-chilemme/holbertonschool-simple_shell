@@ -19,6 +19,11 @@ int requirement_command(char **commands, char *filename)
 
 	if (strcmp(commands[0], "exit") == 0)
 	{
+		if (atoi(commands[1]) == 0)
+		{
+			dprintf(STDERR_FILENO, "%s: 1: exit: Illegal number: %s\n", filename, commands[1]);
+			return (0);
+		}
 		if (commands[1])
 			return (atoi(commands[1]));
 		return (0);
