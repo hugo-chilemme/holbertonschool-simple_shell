@@ -6,7 +6,7 @@
  *
  * Return: Nothing.
  */
-int input_command(char **prompt, char *filename)
+int input_command(char **prompt, char *filename, int last_command_status)
 {
 	char *split_text;
 	int index = 0;
@@ -27,7 +27,8 @@ int input_command(char **prompt, char *filename)
 	}
 	if (!arguments[0])
 		return (0);
-	if (!requirement_command(arguments, filename))
+		
+	if (!requirement_command(arguments, filename, last_command_status))
 	{
 		free(*prompt);
 		if (!isatty(STDIN_FILENO))
