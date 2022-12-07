@@ -6,7 +6,7 @@
  *
  * Return: Nothing.
  */
-int input_command(char **prompt, char *filename, int last_command_status)
+int input_command(char **prompt, char *filename, int status)
 {
 	char *split_text;
 	int index = 0;
@@ -23,20 +23,26 @@ int input_command(char **prompt, char *filename, int last_command_status)
 		}
 		if (strcmp(split_text, "exit") == 0)
 			is_exit = 1;
+
 		split_text = strtok(NULL, " \t\n\r");
 	}
 	if (!arguments[0])
 		return (0);
 		
-	if (!requirement_command(arguments, filename, last_command_status))
+	status = requirement_command(arguments, filename);
+
+	if (!isatty(STDIN_FILENO))
 	{
 		free(*prompt);
-		if (!isatty(STDIN_FILENO))
-		{
-			if (!is_exit)
-				exit(127);
-			exit(2);
-		}
+		if (!is_exit)
+			exit(127);
+		exit(2);
 	}
+	if (status > 1)
+	{
+		free(*prompt);
+		exit(status);
+	}
+
 	return (2);
 }
