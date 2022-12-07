@@ -6,7 +6,7 @@
  *
  * Return: Nothing.
  */
-int requirement_command(char **commands, char *filename)
+int requirement_command(char **commands, char *filename, int last_command_status)
 {
 	char *commandWithPath = NULL;
 	int codestatus = 0;
@@ -15,6 +15,13 @@ int requirement_command(char **commands, char *filename)
 	{
 		env_command();
 		return (1);
+	}
+
+	if (strcmp(commands[0], "exit") == 0)
+	{
+		if (commands[1])
+			exit(atoi(commands[1]));
+		exit(last_command_status);
 	}
 
 	if (!is_path(commands[0]))

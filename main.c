@@ -32,15 +32,8 @@ int main(int argc, char *argv[])
 			continue;
 		}
 
-		if (strncmp(prompt, "exit", 4) == 0)
-		{
-			free(prompt);
-			exit(last_command_status);
-			break;
-		}
-
 		if (strcmp(prompt, "\n") != 0)
-			last_command_status = input_command(&prompt, filename);
+			last_command_status = input_command(&prompt, filename, last_command_status);
 
 	}
 	return (0);
