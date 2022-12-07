@@ -16,7 +16,6 @@ int input_command(char **prompt, char *filename, int status)
 	if (strstr(*prompt, "exit"))
 		is_exit = 1;
 
-	printf("%i\n", is_exit);
 	split_text = strtok(*prompt, " \t\n\r");
 	while (split_text)
 	{
