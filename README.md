@@ -18,8 +18,7 @@ The memory management has been handled.
 
 ## Features
 
-The shell handles the command lines with arguments and pathways.
-`hsh` supports two modes: `interactive`and `non-interactive`.
+`hsh` supports two modes: `interactive`and `non-interactive`. It handles the command lines with arguments and pathways.
 
 ## Built-Ins ⚙️
 
@@ -85,7 +84,7 @@ Below are presented examples of `hsh` usage.
 
 ### Interactive
 
-In interactive mode, `hsh` receives directly the command from the user: standard input linked to the terminal and detected by the isatty(3) function.
+In interactive mode, `hsh` receives directly the command from the user: standard input linked to the terminal and detected by the [isatty(3)](https://www.man7.org/linux/man-pages/man3/isatty.3.html) function.
 
 **Command**
 
@@ -144,9 +143,6 @@ $ ^C
 $
 ```
 
-## Process description 💭
-
-
 ## Manual Page
 
 [Manpage]( )
@@ -164,12 +160,12 @@ The projects include x files as follows:
 |----------|-----------------------------------------------|
 |  main.c     |  Entry point that displays a prompt, checks if user entered `exit` or CTRL+D and reads user input |
 |  main.h     |  Header files, containing all functions prototypes as well as the librairies used |
-|   assembly_command.c   |        |
+|   assembly_command.c   |   Assembles the command     |
 |   env_command.c    |   Prints the current environment    |
-|   execute_command.c     |             |
-|     input_command.c  |   |
-|    is_path.c   |   |
-|    path_command.c   |   |
+|   execute_command.c     |     Creates a child process and execute the command   |
+|     input_command.c  | Tokenises the input received  |
+|    is_path.c   | Checks if there is a '/' in the command |
+|    path_command.c   |  Finds the path to execute the command |
 
 ## Flow Chart 📄
 
