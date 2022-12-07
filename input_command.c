@@ -13,6 +13,10 @@ int input_command(char **prompt, char *filename, int status)
 	char *arguments[1024] = {NULL};
 	int is_exit = 0;
 
+	if (strstr(*prompt, "exit"))
+		is_exit = 1;
+
+	printf("%i\n", is_exit);
 	split_text = strtok(*prompt, " \t\n\r");
 	while (split_text)
 	{
@@ -21,9 +25,6 @@ int input_command(char **prompt, char *filename, int status)
 			arguments[index] = split_text;
 			index += 1;
 		}
-		if (strcmp(split_text, "exit") == 0)
-			is_exit = 1;
-
 		split_text = strtok(NULL, " \t\n\r");
 	}
 	if (!arguments[0])
@@ -31,18 +32,16 @@ int input_command(char **prompt, char *filename, int status)
 		
 	status = requirement_command(arguments, filename);
 
-
-
 	if (isatty(STDIN_FILENO) == 0)
 	{
 		free(*prompt);
 		
-		if (!is_exit)
-			_exitcode(127, filename);
-		_exitcode(status, filename);
+		if (is_exit)
+			_exitcode(2, filename);
+		_exitcode(127, filename);
 	}
 
-	if (status != 0 && status != 1)
+	if (status != 0 && status != 1 || is_exit)
 	{
 		free(*prompt);
 		_exitcode(status, filename);
