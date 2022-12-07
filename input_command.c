@@ -31,12 +31,14 @@ int input_command(char **prompt, char *filename, int status)
 		
 	status = requirement_command(arguments, filename);
 
-	if (!isatty(STDIN_FILENO))
+
+
+	if (isatty(STDIN_FILENO) == 0)
 	{
 		free(*prompt);
+		
 		if (!is_exit)
 			_exitcode(127, filename);
-
 		_exitcode(status, filename);
 	}
 
