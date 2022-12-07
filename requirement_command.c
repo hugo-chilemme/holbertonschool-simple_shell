@@ -6,7 +6,7 @@
  *
  * Return: Nothing.
  */
-int requirement_command(char **commands, char *filename, int last_command_status)
+int requirement_command(char **commands, char *filename)
 {
 	char *commandWithPath = NULL;
 	int codestatus = 0;
@@ -20,8 +20,8 @@ int requirement_command(char **commands, char *filename, int last_command_status
 	if (strcmp(commands[0], "exit") == 0)
 	{
 		if (commands[1])
-			exit(atoi(commands[1]));
-		exit(last_command_status);
+			return (atoi(commands[1]));
+		return (0);
 	}
 
 	if (!is_path(commands[0]))

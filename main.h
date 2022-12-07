@@ -8,9 +8,9 @@
 #include <sys/wait.h>
 #include <sys/stat.h>
 extern char **environ;
-int input_command(char **prompt, char *filename, int last_command_status);
+int input_command(char **prompt, char *filename, int status);
 int execute_command(char **commands, char *filename);
-int requirement_command(char **commands, char *filename, int last_command_status);
+int requirement_command(char **commands, char *filename);
 int is_path(char *path_command);
 char *path_command(char *execute_command);
 void assembly_command(char *directory, char *command, char **output);
