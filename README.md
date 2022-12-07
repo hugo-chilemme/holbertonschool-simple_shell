@@ -13,7 +13,7 @@ This is the repository for our project for [Holberton School](https://www.holber
 * C programming language
 * Vi and Vim
 * Program was developed on an environment using Docker
-* GCC 
+* GCC
 
 ## Features
 
