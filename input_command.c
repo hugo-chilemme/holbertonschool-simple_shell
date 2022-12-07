@@ -36,7 +36,8 @@ int input_command(char **prompt, char *filename, int status)
 		free(*prompt);
 		if (!is_exit)
 			_exitcode(127, filename);
-		_exitcode(2, filename);
+
+		_exitcode(status, filename);
 	}
 
 	if (status != 0 && status != 1)
@@ -44,6 +45,7 @@ int input_command(char **prompt, char *filename, int status)
 		free(*prompt);
 		_exitcode(status, filename);
 	}
+
 
 	return (2);
 }
