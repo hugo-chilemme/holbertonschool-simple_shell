@@ -35,13 +35,14 @@ int input_command(char **prompt, char *filename, int status)
 	{
 		free(*prompt);
 		if (!is_exit)
-			exit(127);
-		exit(2);
+			_exitcode(127, filename);
+		_exitcode(2, filename);
 	}
-	if (status > 1)
+
+	if (status != 0 && status != 1)
 	{
 		free(*prompt);
-		exit(status);
+		_exitcode(status, filename);
 	}
 
 	return (2);
