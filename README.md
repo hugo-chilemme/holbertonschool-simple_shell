@@ -5,7 +5,7 @@ This is the repository for our project for [Holberton School](https://www.holber
 
 ## Overview :computer: 
 `hsh` is a custom UNIX command line interpreter, built entirely in **C** language. It executes commands read from the standard input.
-The memory management has been handled.
+The memory management and the errors output have been handled.
 
 ## Built With :hammer_and_wrench:
 
@@ -154,7 +154,7 @@ $
 
 ## Project Files Description 📌
 
-The projects include x files as follows: 
+The projects include 8 files as follows: 
 
 | File | Description                                     |
 |----------|-----------------------------------------------|
@@ -177,11 +177,11 @@ Thanks to [Taieb](https://github.com/taiebchaabini) for reviewing our project !
 
 ## Authors ✒️
 
-**Hugo**
+**Hugo Chilemme**
 [@HugoCLI](https://github.com/HugoCLI)
 
-**Camille**
-[@CamilleFavriel]()
+**Camille Favriel**
+[@CamilleFavriel](https://github.com/CamilleFavriel)
 
 **Sonia Nguyen**
 [@soniangn](https://github.com/soniangn)
