@@ -1,0 +1,103 @@
+.TH hsh(1)
+
+.SH NAME
+.B hsh
+- GPU Shell
+
+.SH DESCRIPTION
+.B hsh
+is a custom UNIX command line interpreter, built entirely in C language. It executes commands read from the standard input. The memory management has been handled.
+
+.SH BUILT WITH
+.B hsh
+was developped with C programming language.
+
+.SH FEATURES
+The shell handles the command lines with arguments and pathways.
+.B hsh
+supports two modes:
+.B interactive
+and
+.B non-interactive
+
+.SH BUILT-INS
+The following built-ins functions have been implemented. 
+.TP
+.B Exit
+.B Usage: <exit>
+
+.B Quits: <hsh>
+
+.TP
+.B Usage: <env>
+Prints the current environment
+
+.SH EXAMPLES
+Below are presented examples of hsh usage.
+
+.TP
+.B Interactive
+
+In interactive mode, hsh receives directly the command from the user: standard input linked to the terminal and detected by the 
+.B isatty(3)
+function
+
+.TP
+.B Non interactive
+
+In non interactive mode, the commands are read according to the piped commands.
+
+.SH EXIT STATUS
+
+.TP
+
+.RS 1.2i
+
+.TS
+tab(@), left, box;
+c | c
+rB | r.
+Exit@Description
+_
+0@Success
+-1@Failure
+127@Command not found
+.TE
+.RE
+
+.SH LIBRARIES
+.IP stdlib.h
+.IP stdio.h
+.IP unistd.h
+.IP string.h
+.IP sys/types.h
+.IP sys/wait.h
+.IP sys/stat.h
+
+.SH FILES
+.TP
+.RS 1.2i
+
+.TS
+tab(@), left, box;
+c | c
+rB | r.
+File@Description
+_
+main.c@Entry point that displays a prompt checks if user entered exit or CTRL + D and reads user input
+main.h@Header files, containing all functions prototypes as well as the librairies used
+assembly_command.c@Assembles the command
+env_command.c@Prints the current environment
+execute_command.c@Creates a child process and execute the command
+input_command.c@Tokenises the input received
+is_path.c@Checks if there is a '/' in the command
+path_command.c@Finds the path to execute the command
+.TE
+.RE
+
+
+.SH CREDITS
+.PP
+@Hugo Chilemme
+@Sony Nguyen
+@Camille Favriel
