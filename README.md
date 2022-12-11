@@ -8,7 +8,7 @@ This is the repository for our project for [Holberton School](https://www.holber
 The memory management and the errors output have been handled.
  
 ## Built With :hammer_and_wrench:
- 
+  
 `hsh` was developped with: 
  
 * C programming language
