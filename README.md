@@ -13,7 +13,7 @@ The memory management and the errors output have been handled.
   
 * C programming language
 * Visual Studio Code
-* Program was developed on an environment using Docker
+* Program was developed on an environment using Docker 
 * GCC
  
 ## Features 
