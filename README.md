@@ -33,7 +33,7 @@ The following built-ins functions have been implemented:
 $ ./hsh
 $ exit
 ```
-
+ 
 ### Env
 
 * Usage: `env`
