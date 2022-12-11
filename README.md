@@ -1,5 +1,5 @@
 # Hsh Simple Shell
-
+ 
 ## Synopsis ⚡️
 This is the repository for our project for [Holberton School](https://www.holbertonschool.fr/) low-level programming curriculum. The project consisted in coding `hsh`, a simplified version of `sh` Bourne Shell. The project was realized in two weeks based on a flow chart and using Trello planning.
 
