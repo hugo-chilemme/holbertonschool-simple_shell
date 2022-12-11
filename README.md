@@ -9,7 +9,7 @@ The memory management and the errors output have been handled.
   
 ## Built With :hammer_and_wrench: 
   
-`hsh` was developped with:  
+`hsh` was developped with:   
   
 * C programming language
 * Visual Studio Code
