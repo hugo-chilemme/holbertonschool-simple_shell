@@ -16,7 +16,7 @@ The memory management and the errors output have been handled.
 * Program was developed on an environment using Docker
 * GCC
  
-## Features
+## Features 
 
 `hsh` supports two modes: `interactive`and `non-interactive`. It handles the command lines with arguments and pathways.
 
