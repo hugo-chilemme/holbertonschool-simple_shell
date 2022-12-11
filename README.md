@@ -12,7 +12,7 @@ The memory management and the errors output have been handled.
 `hsh` was developped with:   
   
 * C programming language
-* Visual Studio Code
+* Visual Studio Code 
 * Program was developed on an environment using Docker 
 * GCC 
  
