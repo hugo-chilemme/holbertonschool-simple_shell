@@ -41,19 +41,6 @@ The exit command terminates the current shell. If
 is given, the return code to the parent process is set to
 .I status.
 If not, it returns the most recently executed command.
-.TP
-.B history
-Display the history list with line numbers. History displays previous commands.
-.TP
-.B setenv [key] [value]
-Creates a new shell/env variable. If the variable
-.I key
-does not exist, then a new variable is created given the
-.I value.
-If the variable key does exist, then the value is replaced by the given value.
-.TP
-.B unsetenv [key]
-Unsets and removes a shell/env variable. To unset a variable, only the key or name can be given. If the variable is present, then it will remove the variable from env. If the variable does not exist, the function still succeeds, and the environement stay unchanged.
 
 
 .SH EXAMPLES
