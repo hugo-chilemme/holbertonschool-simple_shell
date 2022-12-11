@@ -145,8 +145,7 @@ $
 
 ## Manual Page
 
-[Manpage](https://github.com/HugoCLI/holbertonschool-simple_shell/blob/main/man_shell.1)
-
+[Manpage](https://github.com/HugoCLI/holbertonschool-simple_shell/blob/main/man_shell.1) 
 
 ## Libraries used 📔
 
