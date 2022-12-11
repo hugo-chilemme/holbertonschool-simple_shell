@@ -75,7 +75,7 @@ To exit the program, run `$ exit` or use CTRL + D.
 
 `hsh` is provided with a manpage that is accessible by running:
 ```
-man ./
+man ./man_shell.1
 ```
 
 ## Examples
@@ -145,7 +145,7 @@ $
 
 ## Manual Page
 
-[Manpage]( )
+[Manpage](https://github.com/HugoCLI/holbertonschool-simple_shell/blob/main/man_shell.1)
 
 
 ## Libraries used 📔
