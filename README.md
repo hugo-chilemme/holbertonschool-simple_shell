@@ -19,7 +19,7 @@ The memory management and the errors output have been handled.
 ## Features  
 
 `hsh` supports two modes: `interactive`and `non-interactive`. It handles the command lines with arguments and pathways.
-
+ 
 ## Built-Ins ⚙️
 
 The following built-ins functions have been implemented:
