@@ -27,7 +27,7 @@ The following built-ins functions have been implemented:
 ### Exit
 
 * Usage: `exit`
-* Quits `hsh`
+* Quits `hsh` 
 
 ```
 $ ./hsh
