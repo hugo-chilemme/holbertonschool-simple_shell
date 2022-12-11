@@ -169,7 +169,7 @@ The projects include 8 files as follows:
 
 ## Flow Chart 📄
 
-
+![flowchart](https://github.com/HugoCLI/holbertonschool-simple_shell/blob/main/Simple%20Shell-Page-1.drawio.png)
 
 ## Acknowledgment 🙏
 
