@@ -1,7 +1,7 @@
 # Hsh Simple Shell
  
 ## Synopsis ⚡️
-This is the repository for our project for [Holberton School](https://www.holbertonschool.fr/) low-level programming curriculum. The project consisted in coding `hsh`, a simplified version of `sh` Bourne Shell. The project was realized in two weeks based on a flow chart and using Trello planning.
+This is the repository for our project for [Holberton School](https://www.holbertonschool.fr/) low-level programming curriculum. The project consisted in coding `hsh`, a simplified and custom version of `sh` Bourne Shell. The project was realized in two weeks based on a flow chart and using Trello planning.
 
 ## Overview :computer: 
 `hsh` is a custom UNIX command line interpreter, built entirely in **C** language. It executes commands read from the standard input.
