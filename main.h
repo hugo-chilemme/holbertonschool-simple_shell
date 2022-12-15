@@ -12,7 +12,7 @@ int input_command(char **line, char *filename);
 int execute_command(char **commands, char *filename);
 int requirement_command(char **commands, char *filename);
 int is_path(char *path_command);
-char * path_command(char *execute_command);
+char *path_command(char *execute_command);
 void assembly_command(char *directory, char *command, char **output);
 void env_command(void);
 #endif
