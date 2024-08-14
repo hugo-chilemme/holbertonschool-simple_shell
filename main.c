@@ -1,4 +1,3 @@
-// create simple shell
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -35,22 +34,22 @@ int execute(char *args[])
 }
 
 
-int main(int argc, char *argv[])
+int main(void)
 {
     int i = 1;
     char *line = NULL;
     size_t len = 0;
+    char *args[1024] = {NULL};
 
     getline(&line, &len, stdin);
-    char *args[1024] = {NULL};
 
     args[0] = strtok(line, " \n");
 
-    while (args[i] = strtok(NULL, " \n"))
+    while ((args[i] = strtok(NULL, " \n")))
     {
         i++;
     }
 
     execute(args);
-
+    return 0;
 }
