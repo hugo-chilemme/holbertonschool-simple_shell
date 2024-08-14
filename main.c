@@ -36,28 +36,50 @@ int execute(char *args[])
 
 int main(void)
 {
+    char *text = NULL;
     int i = 1;
-    int j = 1;
+    char *lines[1024] = {NULL};
+    int lineCount = 0;
+    int lineProcess = 0;
     char *line = NULL;
-    size_t len = 0;
     char *args[1024] = {NULL};
 
-    getline(&line, &len, stdin);
+    size_t len = 0;
 
-    args[0] = strtok(line, " \n");
-
-    while ((args[i] = strtok(NULL, " \n")))
+    while(getline(&text, &len, stdin) != -1)
     {
-        i++;
-        j++;
+        lines[lineCount] = strdup(text);
+        lines[lineCount][strlen(lines[lineCount]) - 1] = '\0';
+
+        lineCount++;
     }
 
-    execute(args);
+    free(text);
 
-    for (; j >= 0; j--)
+
+    for (; lineProcess < lineCount; lineProcess++)
     {
-        free(args[j]);
+        line = lines[lineProcess];
+        i = 1;
+        
+        args[0] = strtok(line, " ");
+
+        while ((args[i] = strtok(NULL, " ")))
+        {
+            i++;
+        }
+
+        execute(args);
+
+        free(lines[lineProcess]);
+
+
     }
+
+
+    
+
+   
 
     return 0;
 }
