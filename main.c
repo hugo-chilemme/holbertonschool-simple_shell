@@ -37,6 +37,7 @@ int execute(char *args[])
 int main(void)
 {
     int i = 1;
+    int j = 1;
     char *line = NULL;
     size_t len = 0;
     char *args[1024] = {NULL};
@@ -48,8 +49,15 @@ int main(void)
     while ((args[i] = strtok(NULL, " \n")))
     {
         i++;
+        j++;
     }
 
     execute(args);
+
+    for (; j >= 0; j--)
+    {
+        free(args[j]);
+    }
+
     return 0;
 }
