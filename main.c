@@ -43,6 +43,7 @@ int main(void)
     int lineProcess = 0;
     char *line = NULL;
     char *args[1024] = {NULL};
+    char *arg = NULL;
 
     size_t len = 0;
 
@@ -64,9 +65,13 @@ int main(void)
         
         args[0] = strtok(line, " ");
 
-        while ((args[i] = strtok(NULL, " ")))
+        while ((arg = strtok(NULL, " ")))
         {
-            i++;
+            if (strlen(arg) != 0)
+            {
+                args[i] = arg;
+                i++;
+            }
         }
 
         execute(args);
